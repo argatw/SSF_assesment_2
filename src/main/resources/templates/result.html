@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+</head>
+<body>
+    <div>
+		<h1>Video Game Search</h1>
+		<table>
+			<tr th:each="game : ${games}">
+				<td><img th:src="${game.backgroundImage}" height=100 width=100>
+					<div>Title:</div>
+					<p th:text="${game.name}"></p>
+					<div>Rating:</div>
+					<p th:text="${game.rating}"></p>
+				<td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
